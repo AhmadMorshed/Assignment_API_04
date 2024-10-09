@@ -58,7 +58,7 @@ namespace Store.Repository
                         await context.Products.AddRangeAsync(deliveryMethods);
 
                 }
-                await context.SaveChangesAsync();    
+                await  context.SaveChangesAsync();    
             }
 			catch (Exception ex)
 			{
