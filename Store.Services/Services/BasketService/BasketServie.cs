@@ -25,6 +25,16 @@ namespace Store.Services.Services.BasketService
       
         =>await _basketRepository.DeleteBasketAsync(basketId);
 
+        public Task DeleteBasketAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteBasketAsync(int? basketId)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<CustomerBasketDto> GetBasketAsync(string basketId)
         {
            var basket=await _basketRepository.GetBasketAsync(basketId);

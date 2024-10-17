@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Store.Data.Entities;
+using Store.Data.Entities.OrderEntities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace Store.Data.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());  
             //modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(modelBuilder);
          
@@ -38,6 +40,9 @@ namespace Store.Data.Contexts
       public  DbSet<ProductBrand> ProductBrands { get; set; }
       public  DbSet<ProductType> ProductTypes { get; set; }
         public DbSet<DeliveryMethod> DeliveryMethod { get; set; }
+        public DbSet<Order>  Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+
 
 
     }

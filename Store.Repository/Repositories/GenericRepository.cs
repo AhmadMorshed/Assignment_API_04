@@ -3,7 +3,8 @@ using Store.Data.Contexts;
 using Store.Data.Entities;
 using Store.Repository.Interfaces;
 using Store.Repository.Specification;
-    using System;
+using Store.Repository.Specification.OrderSpecs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,4 +59,13 @@ namespace Store.Repository.Repositories
         public async Task<int> GetCountSpecificationAsync(ISpecification<TEntity> specs)
             =>await ApplySpecification(specs).CountAsync();
 
+        public Task GetAllWithSpecificationByIdAsync(OrderWithItemSpecification specs)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task GetAllWithSpecificationByIdAsync(OrderWithPaymentIntentSpecifaction specs)
+        {
+            throw new NotImplementedException();
+        }
     } }

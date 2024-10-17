@@ -14,7 +14,6 @@ namespace Store.Data.Entities.OrderEntities
 
         public ShippingAddress ShippingAddress { get; set; }
         public DeliveryMethod DeliveryMethod { get; set; }
-
         public int ? DeliveryMethodId { get; set; }
         public OrderStatus orderStatus { get; set; }=OrderStatus.Placed;
         public OrderPaymentStatus OrderPaymentStatus { get; set; }=OrderPaymentStatus.Pending;
@@ -23,6 +22,9 @@ namespace Store.Data.Entities.OrderEntities
 
             =>SubTotal+DeliveryMethod.Price;
         public IReadOnlyList<OrderItem> orderItems { get; set; }
+        public int ? BasketId { get; set; }
+        public string? PaymentIntentId { get; set; }
+        public string? ClientSecret { get; set; }
 
 
     }

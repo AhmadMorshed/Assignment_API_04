@@ -1,5 +1,6 @@
 ﻿using Store.Data.Entities;
 using Store.Repository.Specification;
+using Store.Repository.Specification.OrderSpecs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace Store.Repository.Interfaces
         Task AddAsync(TEntity entity);
         void Update(TEntity entity);
         void Delete(TEntity entity);
-
+        Task GetAllWithSpecificationByIdAsync(OrderWithItemSpecification specs);
+        Task GetAllWithSpecificationByIdAsync(OrderWithPaymentIntentSpecifaction specs);
     }
 }

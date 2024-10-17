@@ -13,5 +13,7 @@ namespace Store.Services.Services.BasketService
         Task<CustomerBasketDto> GetBasketAsync(string basketId);
         Task<CustomerBasketDto> UpdateBasketAsync(CustomerBasketDto basket);
         Task<bool> DeleteBasketAsync(string basketId);
+        Task DeleteBasketAsync();
+        Task DeleteBasketAsync(int? basketId);
     }
 }
